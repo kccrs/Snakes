@@ -51,9 +51,6 @@ describe('Snake', function() {
       assert.equal(snake.width, widthValue);
     });
    });
-});
-
-describe('snake movement', function () {
 
     context('moveRight()', function () {
 
@@ -111,32 +108,4 @@ describe('snake movement', function () {
       });
     });
 
-  //   context('getTaller()', function () {
-  //
-  //     it('should have a method called "getTaller()"', function () {
-  //       var block = new Block();
-  //       assert.isFunction(block.getTaller);
-  //     });
-  //
-  //     it('"getTaller()" should increment its height by 1', function () {
-  //       var block = new Block(0, 0, 5, 5);
-  //       block.getTaller();
-  //       assert.equal(block.height, 11);
-  //       assert.equal(block.width, 10);
-  //     });
-  //   });
-  //
-  //   context('growInLength()', function () {
-  //
-  //     it('should have a method called "grow()"', function () {
-  //       var snake = new Snake();
-  //       assert.isFunction(snake.grow);
-  //     });
-  //
-  //     it('"growInLength()" should increment the "x" property by 4', function () {
-  //       var snake = new Snake(0, 0, 10, 10);
-  //       block.growInLength();
-  //       assert.equal(snake.x, 11);
-  //     });
-  //   });
   });
