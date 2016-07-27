@@ -14,41 +14,25 @@ describe('Snake', function() {
     it('has all default values', function() {
       assert.equal(snake.x, 7);
       assert.equal(snake.y, 12);
-      assert.equal(snake.width, 5);
-      assert.equal(snake.height, 5);
+      assert.equal(snake.width, 15);
+      assert.equal(snake.height, 15);
     });
   });
 
   context('with some assigned attributes', function() {
     // assigning x and y values through variables
-    var xValue = 5;
+    var xValue = 15;
     var yValue = 20;
     var snake = new Snake(xValue, yValue);
 
   it('should allow us to assign specific x and y values and otherwise use defaults', function(){
       // I should be able to create a Snake with x and y assigned
       // test that the x and y are not defaults
-      assert.equal(snake.height, 5);
-      assert.equal(snake.width, 5);
+      assert.equal(snake.height, 15);
+      assert.equal(snake.width, 15);
       assert.equal(snake.x, xValue);
       assert.equal(snake.y, yValue);
       // test that the height and width are defaults
-    });
-   });
-
-   context('with all assigned attributes', function(){
-     var xValue = 30;
-     var yValue = 40;
-     var widthValue = 50;
-     var heightValue = 60;
-
-    var snake = new Snake(xValue, yValue, widthValue, heightValue);
-
-    it('should allow us to assign values to all properties otherwise use defaults', function(){
-      assert.equal(snake.x, xValue);
-      assert.equal(snake.y, yValue);
-      assert.equal(snake.height, heightValue);
-      assert.equal(snake.width, widthValue);
     });
    });
 
