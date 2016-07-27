@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const Block = require('../lib/snake');
+const Snake = require('../lib/snake');
 const World = require('../lib/world');
 
 describe('Snake is in relations to the World', function() {
@@ -30,6 +30,6 @@ describe('World in relation to blocks', function() {
     var snake = new Snake (7, 12, 5, 5);
     world.addSnake(snake);
     world.rightArrow();
-    assert.equal(snake.x, 1);
+    assert.equal(snake.x, 8);
   });
 });

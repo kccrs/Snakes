@@ -16,8 +16,8 @@ describe('World', function() {
 
   it('should have a "snake" property, which starts out as an empty array', function () {
     var world = new World(100, 100);
-    assert.isArray(world.snake);
-    assert.deepEqual(world.snake, []);
+    assert.isArray(world.snakes);
+    assert.deepEqual(world.snakes, []);
   });
 
   it('should have a "food" property, which starts out as an empty array', function () {
