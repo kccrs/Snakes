@@ -4,7 +4,7 @@ const Snake = require('../lib/snake');
 
 describe('Snake', function() {
 
-  context('wth default', function() {
+  context('with default', function() {
     // Make a Snake
     // Assign width and height
     // Assign x and y on where the snake will start off

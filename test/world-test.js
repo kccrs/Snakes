@@ -9,8 +9,9 @@ describe('World', function() {
     assert.isObject(world);
   });
 
-  // has a default height and width
-  // it('should have a default width and height', function() {
-  //   var widthWorld = width
-  // })
+  //has a default height and width
+  it('should have a default width and height', function() {
+    assert.equal(world.width, 100);
+    assert.equal(world.height, 100);
+  });
 });
