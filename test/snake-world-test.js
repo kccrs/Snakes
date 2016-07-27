@@ -69,7 +69,7 @@ describe('World in relation to snake', function() {
     var snake = new Snake (7, 12, 15, 15);
     world.addSnake(snake);
     world.leftArrow();
-    assert.equal(snake.x, 6);
+    assert.equal(snake.x, 3);
   });
 
   it('should have a upArrow() method', function() {
@@ -82,7 +82,7 @@ describe('World in relation to snake', function() {
     var snake = new Snake (7, 12, 15, 15);
     world.addSnake(snake);
     world.upArrow();
-    assert.equal(snake.x, 7);
+    assert.equal(snake.y, 8);
   });
 
   it('should have a downArrow() method', function() {
@@ -95,6 +95,6 @@ describe('World in relation to snake', function() {
     var snake = new Snake (7, 12, 15, 15);
     world.addSnake(snake);
     world.downArrow();
-    assert.equal(snake.x, 7);
+    assert.equal(snake.y, 16);
   });
 });

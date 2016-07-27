@@ -10,18 +10,18 @@ describe('World', function() {
   });
 
   it('should have a default width and height', function() {
-    assert.equal(world.width, 100);
-    assert.equal(world.height, 100);
+    assert.equal(world.width, 400);
+    assert.equal(world.height, 300);
   });
 
   it('should have a "snake" property, which starts out as an empty array', function () {
-    var world = new World(100, 100);
+    var world = new World(400, 300);
     assert.isArray(world.snakes);
     assert.deepEqual(world.snakes, []);
   });
 
   it('should have a "food" property, which starts out as an empty array', function () {
-    var world = new World(100, 100);
+    var world = new World(400, 300);
     assert.isArray(world.food);
     assert.deepEqual(world.food, []);
   });
