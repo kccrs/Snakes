@@ -9,7 +9,7 @@ describe('Snake', function() {
     // Assign width and height
     // Assign x and y on where the snake will start off
 
-    var snake = new Snake({});
+    var snake = new Snake();
 
     it('has all default values', function() {
       assert.equal(snake.x, 7);
@@ -21,10 +21,9 @@ describe('Snake', function() {
 
   context('with some assigned attributes', function() {
     // assigning x and y values through variables
-    var xValue = 10;
-    var yValue = -20;
-    var options = {x: xValue, y: yValue};
-    var snake = new Snake(options);
+    var xValue = 5;
+    var yValue = 20;
+    var snake = new Snake(xValue, yValue);
 
   it('should allow us to assign specific x and y values and otherwise use defaults', function(){
       // I should be able to create a Snake with x and y assigned
@@ -43,19 +42,14 @@ describe('Snake', function() {
      var widthValue = 50;
      var heightValue = 60;
 
-     var options = {
-      x: xValue,
-      y: yValue,
-      height: heightValue,
-      width: widthValue};
-      var snake = new Snake(options);
+    var snake = new Snake(xValue, yValue, widthValue, heightValue);
 
-      it('should allow us to assign values to all properties otherwise use defaults', function(){
-        assert.equal(snake.x, xValue);
-        assert.equal(snake.y, yValue);
-        assert.equal(snake.height, heightValue);
-        assert.equal(snake.width, widthValue);
-      });
+    it('should allow us to assign values to all properties otherwise use defaults', function(){
+      assert.equal(snake.x, xValue);
+      assert.equal(snake.y, yValue);
+      assert.equal(snake.height, heightValue);
+      assert.equal(snake.width, widthValue);
+    });
    });
 
     context('moveRight()', function () {
