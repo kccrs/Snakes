@@ -58,12 +58,12 @@ describe('snake movement', function () {
     context('moveRight()', function () {
 
       it('should have a method called "moveRight()', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveRight);
       });
 
       it('"moveRight()" should increment the "x" property by 1', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         snake.moveRight();
         assert.equal(snake.x, 8);
       });
@@ -72,12 +72,12 @@ describe('snake movement', function () {
     context('moveLeft()', function () {
 
       it('should have a method called "moveLeft()', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveLeft);
       });
 
       it('"moveLeft()" should decrement the "x" property by 1', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         snake.moveLeft();
         assert.equal(snake.x, 6);
       });
@@ -86,28 +86,28 @@ describe('snake movement', function () {
     context('moveDown()', function () {
 
       it('should have a method called "moveDown()', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveDown);
       });
 
       it('"moveDown()" should increment the "y" property by 1', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         snake.moveDown();
-        assert.equal(snake.y, -11);
+        assert.equal(snake.y, 13);
       });
     });
 
     context('moveUp()', function () {
 
       it('should have a method called "moveUp()', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveUp);
       });
 
       it('"moveUp()" should decrement the "y" property by 1', function () {
-        var snake = new Snake(15, 30, 5, 5);
+        var snake = new Snake(7, 12);
         snake.moveUp();
-        assert.equal(snake.y, -13);
+        assert.equal(snake.y, 11);
       });
     });
 
