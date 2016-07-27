@@ -9,11 +9,11 @@ describe('Snake', function() {
     // Assign width and height
     // Assign x and y on where the snake will start off
 
-    var snake = new Snake({});
+    var snake = new Snake();
 
     it('has all default values', function() {
       assert.equal(snake.x, 7);
-      assert.equal(snake.y, -12);
+      assert.equal(snake.y, 12);
       assert.equal(snake.width, 5);
       assert.equal(snake.height, 5);
     });
@@ -21,10 +21,9 @@ describe('Snake', function() {
 
   context('with some assigned attributes', function() {
     // assigning x and y values through variables
-    var xValue = 10;
-    var yValue = -20;
-    var options = {x: xValue, y: yValue};
-    var snake = new Snake(options);
+    var xValue = 5;
+    var yValue = 20;
+    var snake = new Snake(xValue, yValue);
 
   it('should allow us to assign specific x and y values and otherwise use defaults', function(){
       // I should be able to create a Snake with x and y assigned
@@ -43,19 +42,14 @@ describe('Snake', function() {
      var widthValue = 50;
      var heightValue = 60;
 
-     var options = {
-      x: xValue,
-      y: yValue,
-      height: heightValue,
-      width: widthValue};
-      var snake = new Snake(options);
+    var snake = new Snake(xValue, yValue, widthValue, heightValue);
 
-      it('should allow us to assign values to all properties otherwise use defaults', function(){
-        assert.equal(snake.x, xValue);
-        assert.equal(snake.y, yValue);
-        assert.equal(snake.height, heightValue);
-        assert.equal(snake.width, widthValue);
-      });
+    it('should allow us to assign values to all properties otherwise use defaults', function(){
+      assert.equal(snake.x, xValue);
+      assert.equal(snake.y, yValue);
+      assert.equal(snake.height, heightValue);
+      assert.equal(snake.width, widthValue);
+    });
    });
 });
 
@@ -64,12 +58,12 @@ describe('snake movement', function () {
     context('moveRight()', function () {
 
       it('should have a method called "moveRight()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         assert.isFunction(snake.moveRight);
       });
 
       it('"moveRight()" should increment the "x" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         snake.moveRight();
         assert.equal(snake.x, 8);
       });
@@ -78,12 +72,12 @@ describe('snake movement', function () {
     context('moveLeft()', function () {
 
       it('should have a method called "moveLeft()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         assert.isFunction(snake.moveLeft);
       });
 
       it('"moveLeft()" should decrement the "x" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         snake.moveLeft();
         assert.equal(snake.x, 6);
       });
@@ -92,12 +86,12 @@ describe('snake movement', function () {
     context('moveDown()', function () {
 
       it('should have a method called "moveDown()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         assert.isFunction(snake.moveDown);
       });
 
       it('"moveDown()" should increment the "y" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         snake.moveDown();
         assert.equal(snake.y, -11);
       });
@@ -106,12 +100,12 @@ describe('snake movement', function () {
     context('moveUp()', function () {
 
       it('should have a method called "moveUp()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         assert.isFunction(snake.moveUp);
       });
 
       it('"moveUp()" should decrement the "y" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(15, 30, 5, 5);
         snake.moveUp();
         assert.equal(snake.y, -13);
       });
@@ -125,7 +119,7 @@ describe('snake movement', function () {
   //     });
   //
   //     it('"getTaller()" should increment its height by 1', function () {
-  //       var block = new Block(0, 0, 10, 10);
+  //       var block = new Block(0, 0, 5, 5);
   //       block.getTaller();
   //       assert.equal(block.height, 11);
   //       assert.equal(block.width, 10);
