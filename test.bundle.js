@@ -47,7 +47,7 @@
 	__webpack_require__(1);
 	mocha.setup("bdd");
 	__webpack_require__(9)
-	__webpack_require__(56);
+	__webpack_require__(58);
 	if(false) {
 		module.hot.accept();
 		module.hot.dispose(function() {
@@ -83,8 +83,8 @@
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
-		module.hot.accept("!!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha/mocha.css", function() {
-			var newContent = require("!!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha/mocha.css");
+		module.hot.accept("!!/Users/Paul_Nguyen/Projects/Snakes/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/Paul_Nguyen/Projects/Snakes/node_modules/mocha/mocha.css", function() {
+			var newContent = require("!!/Users/Paul_Nguyen/Projects/Snakes/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/Paul_Nguyen/Projects/Snakes/node_modules/mocha/mocha.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -349,6 +349,7 @@
 
 	__webpack_require__(10);
 	__webpack_require__(54);
+	__webpack_require__(56);
 
 /***/ },
 /* 10 */
@@ -360,7 +361,7 @@
 
 	describe('Snake', function () {
 
-	  context('wth default', function () {
+	  context('with default', function () {
 	    // Make a Snake
 	    // Assign width and height
 	    // Assign x and y on where the snake will start off
@@ -10354,10 +10355,11 @@
 	    assert.isObject(world);
 	  });
 
-	  // has a default height and width
-	  // it('should have a default width and height', function() {
-	  //   var widthWorld = width
-	  // })
+	  //has a default height and width
+	  it('should have a default width and height', function () {
+	    assert.equal(world.width, 100);
+	    assert.equal(world.height, 100);
+	  });
 	});
 
 /***/ },
@@ -10368,12 +10370,65 @@
 	  this.width = 100;
 	  this.height = 100;
 	  // this.snake = new Snake(options, this);
+	  // this.food = new Food();
 	}
 
 	module.exports = World;
 
 /***/ },
 /* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	const assert = __webpack_require__(11).assert;
+
+	const Food = __webpack_require__(57);
+
+	describe('Food', function () {
+	  var food = new Food();
+
+	  context('use default values for properties', function () {
+	    it('should instantiate an Object called Food', function () {
+	      assert.isObject(food);
+	    });
+	    // object accepts default values
+	    it('has all default values', function () {
+	      assert.equal(food.x, 100);
+	      assert.equal(food.y, -200);
+	      assert.equal(food.width, 2);
+	      assert.equal(food.height, 2);
+	    });
+	  });
+
+	  context('accepts variables', function () {
+	    xValue = 70;
+	    yValue = 30;
+	    var food = new Food(xValue, yValue);
+
+	    //object has default width and height but accepts variables for x,y
+	    it('accepts variables for x and y, keeping default for others', function () {
+	      assert.equal(food.x, xValue);
+	      assert.equal(food.y, yValue);
+	      assert.equal(food.width, 2);
+	      assert.equal(food.height, 2);
+	    });
+	  });
+	});
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	function Food(x, y, width, height) {
+	  this.x = x || 100;
+	  this.y = y || -200;
+	  this.width = 2;
+	  this.height = 2;
+	}
+
+	module.exports = Food;
+
+/***/ },
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {process.nextTick(function() {
@@ -10384,10 +10439,10 @@
 			mocha.run();
 	});
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(57)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(59)))
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
