@@ -13,7 +13,7 @@ describe('Snake', function() {
 
     it('has all default values', function() {
       assert.equal(snake.x, 7);
-      assert.equal(snake.y, -12);
+      assert.equal(snake.y, 12);
       assert.equal(snake.width, 5);
       assert.equal(snake.height, 5);
     });
@@ -57,19 +57,16 @@ describe('Snake', function() {
         assert.equal(snake.width, widthValue);
       });
    });
-});
-
-describe('snake movement', function () {
 
     context('moveRight()', function () {
 
       it('should have a method called "moveRight()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveRight);
       });
 
       it('"moveRight()" should increment the "x" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         snake.moveRight();
         assert.equal(snake.x, 8);
       });
@@ -78,12 +75,12 @@ describe('snake movement', function () {
     context('moveLeft()', function () {
 
       it('should have a method called "moveLeft()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveLeft);
       });
 
       it('"moveLeft()" should decrement the "x" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         snake.moveLeft();
         assert.equal(snake.x, 6);
       });
@@ -92,57 +89,57 @@ describe('snake movement', function () {
     context('moveDown()', function () {
 
       it('should have a method called "moveDown()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveDown);
       });
 
       it('"moveDown()" should increment the "y" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         snake.moveDown();
-        assert.equal(snake.y, -11);
+        assert.equal(snake.y, 13);
       });
     });
 
     context('moveUp()', function () {
 
       it('should have a method called "moveUp()', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         assert.isFunction(snake.moveUp);
       });
 
       it('"moveUp()" should decrement the "y" property by 1', function () {
-        var snake = new Snake(15, 30);
+        var snake = new Snake(7, 12);
         snake.moveUp();
-        assert.equal(snake.y, -13);
+        assert.equal(snake.y, 11);
       });
     });
 
-  //   context('getTaller()', function () {
-  //
-  //     it('should have a method called "getTaller()"', function () {
-  //       var block = new Block();
-  //       assert.isFunction(block.getTaller);
-  //     });
-  //
-  //     it('"getTaller()" should increment its height by 1', function () {
-  //       var block = new Block(0, 0, 10, 10);
-  //       block.getTaller();
-  //       assert.equal(block.height, 11);
-  //       assert.equal(block.width, 10);
-  //     });
-  //   });
-  //
-  //   context('growInLength()', function () {
-  //
-  //     it('should have a method called "grow()"', function () {
-  //       var snake = new Snake();
-  //       assert.isFunction(snake.grow);
-  //     });
-  //
-  //     it('"growInLength()" should increment the "x" property by 4', function () {
-  //       var snake = new Snake(0, 0, 10, 10);
-  //       block.growInLength();
-  //       assert.equal(snake.x, 11);
-  //     });
-  //   });
+    // context('getTaller()', function () {
+    //
+    //   it('should have a method called "getTaller()"', function () {
+    //     var block = new Block();
+    //     assert.isFunction(block.getTaller);
+    //   });
+    //
+    //   it('"getTaller()" should increment its height by 1', function () {
+    //     var block = new Block(0, 0, 10, 10);
+    //     block.getTaller();
+    //     assert.equal(block.height, 11);
+    //     assert.equal(block.width, 10);
+    //   });
+    // });
+    //
+    // context('growInLength()', function () {
+    //
+    //   it('should have a method called "grow()"', function () {
+    //     var snake = new Snake();
+    //     assert.isFunction(snake.grow);
+    //   });
+    //
+    //   it('"growInLength()" should increment the "x" property by 4', function () {
+    //     var snake = new Snake(0, 0, 10, 10);
+    //     block.growInLength();
+    //     assert.equal(snake.x, 11);
+    //   });
+    // });
   });
