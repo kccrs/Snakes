@@ -56,7 +56,7 @@ describe('World in relation to snake', function() {
     var snake = new Snake (7, 12, 15, 15);
     world.addSnake(snake);
     world.rightArrow();
-    assert.equal(snake.x, 8);
+    assert.equal(snake.x, 11);
   });
 
   it('should have a leftArrow() method', function() {

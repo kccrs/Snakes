@@ -46,7 +46,7 @@ describe('Snake', function() {
       it('"moveRight()" should increment the "x" property by 1', function () {
         var snake = new Snake(7, 12);
         snake.moveRight();
-        assert.equal(snake.x, 8);
+        assert.equal(snake.x, 11);
       });
     });
 
