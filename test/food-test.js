@@ -13,8 +13,8 @@ describe('Food', function(){
     it('has all default values', function(){
       assert.equal(food.x, 100);
       assert.equal(food.y, 50);
-      assert.equal(food.width, 5);
-      assert.equal(food.height, 5);
+      assert.equal(food.width, 10);
+      assert.equal(food.height, 10);
     });
   });
 
@@ -27,8 +27,8 @@ describe('Food', function(){
     it('accepts variables for x and y, keeping default for others', function(){
       assert.equal(food.x, xValue);
       assert.equal(food.y, yValue);
-      assert.equal(food.width, 5);
-      assert.equal(food.height, 5);
+      assert.equal(food.width, 10);
+      assert.equal(food.height, 10);
     });
   });
 
