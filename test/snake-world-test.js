@@ -51,11 +51,50 @@ describe('World in relation to snake', function() {
     assert.isFunction(world.rightArrow);
   });
 
-  it('should move the snake right whent the rightArrow() is pressed', function() {
+  it('should move the snake right when the rightArrow() is pressed', function() {
     var world = new World (100, 100);
     var snake = new Snake (7, 12, 15, 15);
     world.addSnake(snake);
     world.rightArrow();
-    assert.equal(snake.x, 8);
+    assert.equal(snake.x, 11);
+  });
+
+  it('should have a leftArrow() method', function() {
+    var world = new World(100, 100);
+    assert.isFunction(world.leftArrow);
+  });
+
+  it('should move the snake left when the leftArrow() is pressed', function() {
+    var world = new World (100, 100);
+    var snake = new Snake (7, 12, 15, 15);
+    world.addSnake(snake);
+    world.leftArrow();
+    assert.equal(snake.x, 3);
+  });
+
+  it('should have a upArrow() method', function() {
+    var world = new World(100, 100);
+    assert.isFunction(world.upArrow);
+  });
+
+  it('should move the snake up when the upArrow() is pressed', function() {
+    var world = new World (100, 100);
+    var snake = new Snake (7, 12, 15, 15);
+    world.addSnake(snake);
+    world.upArrow();
+    assert.equal(snake.y, 8);
+  });
+
+  it('should have a downArrow() method', function() {
+    var world = new World(100, 100);
+    assert.isFunction(world.downArrow);
+  });
+
+  it('should move the snake down when the downArrow() is pressed', function() {
+    var world = new World (100, 100);
+    var snake = new Snake (7, 12, 15, 15);
+    world.addSnake(snake);
+    world.downArrow();
+    assert.equal(snake.y, 16);
   });
 });

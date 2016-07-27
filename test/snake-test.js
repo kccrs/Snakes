@@ -43,10 +43,10 @@ describe('Snake', function() {
         assert.isFunction(snake.moveRight);
       });
 
-      it('"moveRight()" should increment the "x" property by 1', function () {
+      it('"moveRight()" should increment the "x" property by 4', function () {
         var snake = new Snake(7, 12);
         snake.moveRight();
-        assert.equal(snake.x, 8);
+        assert.equal(snake.x, 11);
       });
     });
 
@@ -57,10 +57,10 @@ describe('Snake', function() {
         assert.isFunction(snake.moveLeft);
       });
 
-      it('"moveLeft()" should decrement the "x" property by 1', function () {
+      it('"moveLeft()" should decrement the "x" property by 4', function () {
         var snake = new Snake(7, 12);
         snake.moveLeft();
-        assert.equal(snake.x, 6);
+        assert.equal(snake.x, 3);
       });
     });
 
@@ -71,10 +71,10 @@ describe('Snake', function() {
         assert.isFunction(snake.moveDown);
       });
 
-      it('"moveDown()" should increment the "y" property by 1', function () {
+      it('"moveDown()" should increment the "y" property by 4', function () {
         var snake = new Snake(7, 12);
         snake.moveDown();
-        assert.equal(snake.y, 13);
+        assert.equal(snake.y, 16);
       });
     });
 
@@ -85,10 +85,10 @@ describe('Snake', function() {
         assert.isFunction(snake.moveUp);
       });
 
-      it('"moveUp()" should decrement the "y" property by 1', function () {
+      it('"moveUp()" should decrement the "y" property by 4', function () {
         var snake = new Snake(7, 12);
         snake.moveUp();
-        assert.equal(snake.y, 11);
+        assert.equal(snake.y, 8);
       });
     });
 
