@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kccrs/Snake-game"
+    "url": "https://github.com/kccrs/Snakes"
   },
   "author": "Paul Nguyen and Casey Cross",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kccrs/Snake-game/issues"
+    "url": "https://github.com/kccrs/Snakes/issues"
   },
-  "homepage": "https://github.com/kccrs/Snake-game",
+  "homepage": "https://github.com/kccrs/Snakes",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.11.4",
