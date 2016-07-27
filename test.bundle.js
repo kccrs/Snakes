@@ -47,7 +47,7 @@
 	__webpack_require__(1);
 	mocha.setup("bdd");
 	__webpack_require__(9)
-	__webpack_require__(54);
+	__webpack_require__(56);
 	if(false) {
 		module.hot.accept();
 		module.hot.dispose(function() {
@@ -83,8 +83,8 @@
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
-		module.hot.accept("!!/Users/caseycross/Documents/Turing/Mod1-Projects/game-time-starter-kit/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/caseycross/Documents/Turing/Mod1-Projects/game-time-starter-kit/node_modules/mocha/mocha.css", function() {
-			var newContent = require("!!/Users/caseycross/Documents/Turing/Mod1-Projects/game-time-starter-kit/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/caseycross/Documents/Turing/Mod1-Projects/game-time-starter-kit/node_modules/mocha/mocha.css");
+		module.hot.accept("!!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha/mocha.css", function() {
+			var newContent = require("!!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/caseycross/Documents/Turing/Mod1-Projects/snakes/node_modules/mocha/mocha.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -348,6 +348,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(10);
+	__webpack_require__(54);
 
 /***/ },
 /* 10 */
@@ -358,15 +359,58 @@
 	const Snake = __webpack_require__(53);
 
 	describe('Snake', function () {
-	  context('with default', function () {
+
+	  context('wth default', function () {
 	    // Make a Snake
 	    // Assign width and height
 	    // Assign x and y on where the snake will start off
 
-	    var snake = new Snake();
+	    var snake = new Snake({});
 
-	    it('has a default x value', function () {
+	    it('has all default values', function () {
 	      assert.equal(snake.x, 7);
+	      assert.equal(snake.y, -12);
+	      assert.equal(snake.width, 5);
+	      assert.equal(snake.height, 5);
+	    });
+	  });
+
+	  context('with some assigned attributes', function () {
+	    // assigning x and y values through variables
+	    var xValue = 10;
+	    var yValue = -20;
+	    var options = { x: xValue, y: yValue };
+	    var snake = new Snake(options);
+
+	    it('should allow us to assign specific x and y values and otherwise use defaults', function () {
+	      // I should be able to create a Snake with x and y assigned
+	      // test that the x and y are not defaults
+	      assert.equal(snake.height, 5);
+	      assert.equal(snake.width, 5);
+	      assert.equal(snake.x, xValue);
+	      assert.equal(snake.y, yValue);
+	      // test that the height and width are defaults
+	    });
+	  });
+
+	  context('with all assigned attributes', function () {
+	    var xValue = 30;
+	    var yValue = 40;
+	    var widthValue = 50;
+	    var heightValue = 60;
+
+	    var options = {
+	      x: xValue,
+	      y: yValue,
+	      height: heightValue,
+	      width: widthValue };
+	    var snake = new Snake(options);
+
+	    it('should allow us to assign values to all properties otherwise use defaults', function () {
+	      assert.equal(snake.x, xValue);
+	      assert.equal(snake.y, yValue);
+	      assert.equal(snake.height, heightValue);
+	      assert.equal(snake.width, widthValue);
 	    });
 	  });
 	});
@@ -10285,14 +10329,51 @@
 /* 53 */
 /***/ function(module, exports) {
 
-	function Snake(x) {
-	  this.x = 5;
+	
+	function Snake(options) {
+	  this.x = options.x || 7;
+	  this.y = options.y || -12;
+	  this.width = options.width || 5;
+	  this.height = options.height || 5;
 	}
 
 	module.exports = Snake;
 
 /***/ },
 /* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	const assert = __webpack_require__(11).assert;
+
+	const World = __webpack_require__(55);
+
+	describe('World', function () {
+	  var world = new World();
+
+	  it('should instantiate an object', function () {
+	    assert.isObject(world);
+	  });
+
+	  // has a default height and width
+	  // it('should have a default width and height', function() {
+	  //   var widthWorld = width
+	  // })
+	});
+
+/***/ },
+/* 55 */
+/***/ function(module, exports) {
+
+	function World(width, height) {
+	  this.width = 100;
+	  this.height = 100;
+	  // this.snake = new Snake(options, this);
+	}
+
+	module.exports = World;
+
+/***/ },
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {process.nextTick(function() {
@@ -10303,10 +10384,10 @@
 			mocha.run();
 	});
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(55)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(57)))
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
