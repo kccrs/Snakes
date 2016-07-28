@@ -95,22 +95,22 @@ describe('Snake', function() {
 describe('topLeft()', function () {
 
     it('should have a method called "topLeft()"', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isFunction(snake.topLeft);
     });
 
     it('should return an object', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isObject(snake.topLeft());
     });
 
     it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.topLeft().x);
     });
 
     it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.topLeft().y);
     });
 
@@ -129,22 +129,22 @@ describe('topLeft()', function () {
   describe('topRight()', function () {
 
     it('should have a method called "topRight()"', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isFunction(snake.topRight);
     });
 
     it('should return an object', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isObject(snake.topRight());
     });
 
     it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.topRight().x);
     });
 
     it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.topRight().y);
     });
 
@@ -163,22 +163,22 @@ describe('topLeft()', function () {
   describe('bottomLeft()', function () {
 
     it('should have a method called "bottomLeft()"', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isFunction(snake.bottomLeft);
     });
 
     it('should return an object', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isObject(snake.bottomLeft());
     });
 
     it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.bottomLeft().x);
     });
 
     it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.bottomLeft().y);
     });
 
@@ -197,22 +197,22 @@ describe('topLeft()', function () {
   describe('bottomRight()', function () {
 
     it('should have a method called "bottomRight()"', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isFunction(snake.bottomRight);
     });
 
     it('should return an object', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isObject(snake.bottomRight());
     });
 
     it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.bottomRight().x);
     });
 
     it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(7, 12, 15, 15)
+      var snake = new Snake(7, 12, 15, 15);
       assert.isNumber(snake.bottomRight().y);
     });
 
