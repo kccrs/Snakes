@@ -92,4 +92,14 @@ describe('Snake', function() {
       });
     });
 
+    context('Collision Detection', function() {
+
+      it('should have a method called isCollidingWithFood()', function() {
+        var snake = new Snake(7, 12, 400, 300);
+        assert.isFunction(snake.isCollidingWithFood);
+      });
+
+
+
+    });
   });
