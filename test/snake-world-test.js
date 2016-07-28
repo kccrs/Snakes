@@ -1,6 +1,8 @@
 const assert = require('chai').assert;
 const Snake = require('../lib/snake');
+const Food = require('../lib/food');
 const World = require('../lib/world');
+
 
 describe('Snake in relation to the World', function() {
 
@@ -37,14 +39,13 @@ describe('World in relation to snake', function() {
       assert.isFunction(world.addFood);
     });
 
-    // it('should know about the enemies added to the world', function() {
-    //   var world = new World(100, 100);
-    //   var enemy = new Block(0, 0, 10, 10);
-    //
-    //   world.addEnemy(enemy);
-    //   assert.include(world.enemies, enemy);
-    // });
+    it('should know about the food added to the world', function() {
+      var world = new World(100, 100);
+      var food = new Snake(7, 12, 10, 10);
 
+      world.addFood(food);
+      assert.include(world.food, food);
+    });
 
   it('should have a rightArrow() method', function() {
     var world = new World(100, 100);
