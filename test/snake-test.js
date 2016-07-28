@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
-
 const Snake = require('../lib/snake');
+const Food = require('../lib/food');
 
 describe('Snake', function() {
 
@@ -157,7 +157,6 @@ describe('topLeft()', function () {
       var snake = new Snake(7, 12, 15, 15);
       assert.equal(snake.topRight().y, snake.y);
     });
-
   });
 
   describe('bottomLeft()', function () {
@@ -225,6 +224,34 @@ describe('topLeft()', function () {
       var snake = new Snake(7, 12, 15, 15);
       assert.equal(snake.bottomRight().y, snake.y + snake.height);
     });
+  });
+
+  context('Collision Detection', function() {
+
+    it('should have a method called isEatingFood()', function() {
+      var snake = new Snake(7, 12, 400, 300);
+      assert.isFunction(snake.isEatingFood);
+    });
+
+    it('should return truthy if it is eating food', function() {
+      var snake = new Snake(100, 12, 400, 300);
+      var food = new Food(100, 50, 10, 10);
+      var eating = snake.isEatingFood(food);
+
+      assert.isTrue(eating);
+    });
+
+    it('should return false if it is not eating food', function() {
+      var snake = new Snake(7, 12, 400, 300);
+      var food = new Food(100, 50, 10, 10);
+      var eating = snake.isEatingFood(food);
+
+      assert.isFalse(eating);
+    });
+
+    
+
+
 
   });
 
