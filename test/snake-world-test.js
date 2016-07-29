@@ -34,18 +34,6 @@ describe('World in relation to snake', function() {
       assert.include(world.snakes, snake);
     });
 
-    it('should have a method called addFood()', function(){
-      var world = new World(100, 100);
-      assert.isFunction(world.addFood);
-    });
-
-    it('should know about the food added to the world', function() {
-      var world = new World(100, 100);
-      var food = new Snake(20, 20, 20, 20);
-
-      world.addFood(food);
-      assert.include(world.food, food);
-    });
 
   it('should have a rightArrow() method', function() {
     var world = new World(100, 100);
