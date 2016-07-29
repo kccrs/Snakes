@@ -13,8 +13,8 @@ describe('Food', function(){
     it('has all default values', function(){
       assert.equal(food.x, 100);
       assert.equal(food.y, 50);
-      assert.equal(food.width, 10);
-      assert.equal(food.height, 10);
+      assert.equal(food.width, 20);
+      assert.equal(food.height, 20);
     });
   });
 
@@ -27,20 +27,20 @@ describe('Food', function(){
     it('accepts variables for x and y, keeping default for others', function(){
       assert.equal(food.x, xValue);
       assert.equal(food.y, yValue);
-      assert.equal(food.width, 10);
-      assert.equal(food.height, 10);
+      assert.equal(food.width, 20);
+      assert.equal(food.height, 20);
     });
   });
 
 describe('topLeft()', function () {
 
     it('should have a method called topLeft() that returns an object', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.isObject(food.topLeft());
     });
 
     it('should return the x and y coordinates of the topLeft corner of the food', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.equal(food.topLeft().x, food.x);
       assert.equal(food.topLeft().y, food.y);
     });
@@ -49,12 +49,12 @@ describe('topLeft()', function () {
   describe('topRight()', function () {
 
     it('should have a method called topRight() that returns an object', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.isObject(food.topRight());
     });
 
     it('should return the x and y coordinates of the topRight corner of the food', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.equal(food.topRight().x, food.x + food.width);
       assert.equal(food.topRight().y, food.y);
     });
@@ -63,12 +63,12 @@ describe('topLeft()', function () {
   describe('bottomLeft()', function () {
 
     it('should have a method called bottomLeft() that returns an object', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.isObject(food.bottomLeft());
     });
 
     it('should return the x and y coordinates of the bottomLeft corner of the food', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.equal(food.bottomLeft().x, food.x);
       assert.equal(food.bottomLeft().y, food.y + food.height);
     });
@@ -77,12 +77,12 @@ describe('topLeft()', function () {
   describe('bottomRight()', function () {
 
     it('should have a method called bottomRight() that returns an object', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.isObject(food.bottomRight());
     });
 
     it('should return the x and y coordinates of the bottomRight corner of the food', function () {
-      var food = new Food(100, 50, 10, 10);
+      var food = new Food(100, 50, 20, 20);
       assert.equal(food.bottomRight().x, food.x + food.width);
       assert.equal(food.bottomRight().y, food.y + food.height);
     });
