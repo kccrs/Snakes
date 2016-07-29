@@ -48,10 +48,10 @@ describe('Snake', function() {
         assert.equal(snake.width, 385);
       });
 
-      it('"moveRight()" should increment the "x" property by 5', function () {
+      it('"moveRight()" should increment the "x" property by 20', function () {
         var snake = new Snake(20, 20);
         snake.moveRight();
-        assert.equal(snake.x, 20);
+        assert.equal(snake.x, 40);
       });
     });
 
@@ -62,10 +62,10 @@ describe('Snake', function() {
         assert.isFunction(snake.moveLeft);
       });
 
-      it('"moveLeft()" should decrement the "x" property by 5', function () {
+      it('"moveLeft()" should decrement the "x" property by 20', function () {
         var snake = new Snake(20, 20);
         snake.moveLeft();
-        assert.equal(snake.x, 5);
+        assert.equal(snake.x, 0);
       });
     });
 
@@ -76,10 +76,10 @@ describe('Snake', function() {
         assert.isFunction(snake.moveDown);
       });
 
-      it('"moveDown()" should increment the "y" property by 5', function () {
+      it('"moveDown()" should increment the "y" property by 20', function () {
         var snake = new Snake(20, 20);
         snake.moveDown();
-        assert.equal(snake.y, 20);
+        assert.equal(snake.y, 40);
       });
     });
 
@@ -90,10 +90,10 @@ describe('Snake', function() {
         assert.isFunction(snake.moveUp);
       });
 
-      it('"moveUp()" should decrement the "y" property by 5', function () {
+      it('"moveUp()" should decrement the "y" property by 20', function () {
         var snake = new Snake(20, 20);
         snake.moveUp();
-        assert.equal(snake.y, 5);
+        assert.equal(snake.y, 0);
       });
     });
 
@@ -239,7 +239,7 @@ describe('topLeft()', function () {
     });
 
     it('should return truthy if it is eating food', function() {
-      var snake = new Snake(100, 20, 400, 300);
+      var snake = new Snake(100, 20, 20, 20);
       var food = new Food(100, 50, 20, 20);
       var eating = snake.isEatingFood(food);
 
@@ -247,7 +247,7 @@ describe('topLeft()', function () {
     });
 
     it('should return false if it is not eating food', function() {
-      var snake = new Snake(20, 20, 400, 300);
+      var snake = new Snake(20, 20, 20, 20);
       var food = new Food(100, 50, 20, 20);
       var eating = snake.isEatingFood(food);
 

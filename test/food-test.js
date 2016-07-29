@@ -11,8 +11,6 @@ describe('Food', function(){
     });
     // object accepts default values
     it('has all default values', function(){
-      assert.equal(food.x, 100);
-      assert.equal(food.y, 50);
       assert.equal(food.width, 20);
       assert.equal(food.height, 20);
     });
