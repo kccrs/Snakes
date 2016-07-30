@@ -19,22 +19,22 @@ describe('Snake', function() {
     });
   });
 
-  context('with some assigned attributes', function() {
-    // assigning x and y values through variables
-    var xValue = 20;
-    var yValue = 20;
-    var snake = new Snake(xValue, yValue);
-
-    it('should allow us to assign specific x and y values and otherwise use defaults', function(){
-      // I should be able to create a Snake with x and y assigned
-      // test that the x and y are not defaults
-      assert.equal(snake.height, 20);
-      assert.equal(snake.width, 20);
-      assert.equal(snake.x, xValue);
-      assert.equal(snake.y, yValue);
-      // test that the height and width are defaults
-    });
-   });
+  // context('with some assigned attributes', function() {
+  //   // assigning x and y values through variables
+  //   var xValue = 20;
+  //   var yValue = 20;
+  //   var snake = new Snake(xValue, yValue);
+  //
+  //   it('should allow us to assign specific x and y values and otherwise use defaults', function(){
+  //     // I should be able to create a Snake with x and y assigned
+  //     // test that the x and y are not defaults
+  //     assert.equal(snake.height, 20);
+  //     assert.equal(snake.width, 20);
+  //     assert.equal(snake.x, xValue);
+  //     assert.equal(snake.y, yValue);
+  //     // test that the height and width are defaults
+  //   });
+  //  });
 
     context('moveRight()', function () {
 
@@ -128,7 +128,6 @@ describe('topLeft()', function () {
       var snake = new Snake(20, 20, 20, 20);
       assert.equal(snake.topLeft().y, snake.y);
     });
-
   });
 
   describe('topRight()', function () {
