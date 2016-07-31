@@ -91,6 +91,7 @@ describe('World in relation to snake', function() {
 
     it('should have a method called isSnakeEating()', function() {
       var world = new World(100, 100);
+      
       assert.isFunction(world.isSnakeEating);
     });
 
