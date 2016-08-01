@@ -1,5 +1,4 @@
 const assert = require('chai').assert;
-
 const World = require('../lib/world');
 
 describe('World', function() {
@@ -14,16 +13,14 @@ describe('World', function() {
     assert.equal(world.height, 300);
   });
 
-  it('should have a "snake" property, which starts out as an empty array', function () {
+  it('should have a "snake" property, which instantiates a new snake', function () {
     var world = new World(400, 300);
-    assert.isArray(world.snakes);
-    assert.deepEqual(world.snakes, []);
+    assert.isObject(world.snake);
   });
 
-  it('should have a "food" property, which starts out as an empty array', function () {
+  it('should have a "generateFood" method, which creates a new instance of food', function () {
     var world = new World(400, 300);
-    assert.isArray(world.food);
-    assert.deepEqual(world.food, []);
+    assert.isFunction(generateFood());
   });
 
 });
