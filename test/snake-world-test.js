@@ -62,18 +62,4 @@ describe('World in relation to snake', function() {
     snake.moveDown();
     assert.equal(snake.y, 40);
   });
-
-  context('When Snake is eating', function() {
-
-    it('should have a method called snakeEatsFood()', function() {
-      var world = new World(100, 100);
-
-      assert.isFunction(world.isSnakeEating);
-    });
-
-    it('should remove food when snake eats food', function() {
-      
-    });
-
-  });
 });
