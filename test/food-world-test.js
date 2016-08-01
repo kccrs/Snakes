@@ -33,4 +33,11 @@ describe('world in relation to food', function() {
     assert.isTrue(food.y > world.height - food.height);
   });
 
+  it('should have a "generateFood" method, which creates a new instance of food', function () {
+    var world = new World(400, 300);
+    var food = new Food(20, 20, 20, 20);
+    assert.isFunction(world.generateFood);
+  });
+
+
 });
