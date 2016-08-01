@@ -1,6 +1,8 @@
 const assert = require('chai').assert;
 const World = require('../lib/world');
 
+
+
 describe('World', function() {
   var world = new World();
 
@@ -16,11 +18,6 @@ describe('World', function() {
   it('should have a "snake" property, which instantiates a new snake', function () {
     var world = new World(400, 300);
     assert.isObject(world.snake);
-  });
-
-  it('should have a "generateFood" method, which creates a new instance of food', function () {
-    var world = new World(400, 300);
-    assert.isFunction(generateFood());
   });
 
 });
