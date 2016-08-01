@@ -5,36 +5,33 @@ const Food = require('../lib/food');
 describe('Snake', function() {
 
   context('with default', function() {
-    // Make a Snake
-    // Assign width and height
-    // Assign x and y on where the snake will start off
 
     var snake = new Snake();
 
     it('has all default values', function() {
-      assert.equal(snake.x, 20);
-      assert.equal(snake.y, 20);
+      assert.equal(snake.x, 0);
+      assert.equal(snake.y, 0);
       assert.equal(snake.width, 20);
       assert.equal(snake.height, 20);
     });
   });
 
-  // context('with some assigned attributes', function() {
-  //   // assigning x and y values through variables
-  //   var xValue = 20;
-  //   var yValue = 20;
-  //   var snake = new Snake(xValue, yValue);
-  //
-  //   it('should allow us to assign specific x and y values and otherwise use defaults', function(){
-  //     // I should be able to create a Snake with x and y assigned
-  //     // test that the x and y are not defaults
-  //     assert.equal(snake.height, 20);
-  //     assert.equal(snake.width, 20);
-  //     assert.equal(snake.x, xValue);
-  //     assert.equal(snake.y, yValue);
-  //     // test that the height and width are defaults
-  //   });
-  //  });
+  context('with some assigned attributes', function() {
+    // assigning x and y values through variables
+    var xValue = 20;
+    var yValue = 20;
+    var snake = new Snake(xValue, yValue);
+
+    it('should allow us to assign specific x and y values and otherwise use defaults', function(){
+      // I should be able to create a Snake with x and y assigned
+      // test that the x and y are not defaults
+      assert.equal(snake.height, 20);
+      assert.equal(snake.width, 20);
+      assert.equal(snake.x, xValue);
+      assert.equal(snake.y, yValue);
+      // test that the height and width are defaults
+    });
+   });
 
     context('moveRight()', function () {
 
@@ -97,165 +94,8 @@ describe('Snake', function() {
       });
     });
 
-describe('topLeft()', function () {
-
-    it('should have a method called "topLeft()"', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isFunction(snake.topLeft);
-    });
-
-    it('should return an object', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isObject(snake.topLeft());
-    });
-
-    it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.topLeft().x);
-    });
-
-    it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.topLeft().y);
-    });
-
-    it('should return the x coordinate of the topLeft corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.topLeft().x, snake.x);
-    });
-
-    it('should return the y coordinate of the topLeft corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.topLeft().y, snake.y);
-    });
-  });
-
-  describe('topRight()', function () {
-
-    it('should have a method called "topRight()"', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isFunction(snake.topRight);
-    });
-
-    it('should return an object', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isObject(snake.topRight());
-    });
-
-    it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.topRight().x);
-    });
-
-    it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.topRight().y);
-    });
-
-    it('should return the x coordinate of the topRight corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.topRight().x, snake.x + snake.width);
-    });
-
-    it('should return the y coordinate of the topRight corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.topRight().y, snake.y);
-    });
-  });
-
-  describe('bottomLeft()', function () {
-
-    it('should have a method called "bottomLeft()"', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isFunction(snake.bottomLeft);
-    });
-
-    it('should return an object', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isObject(snake.bottomLeft());
-    });
-
-    it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.bottomLeft().x);
-    });
-
-    it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.bottomLeft().y);
-    });
-
-    it('should return the x coordinate of the bottomLeft corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.bottomLeft().x, snake.x);
-    });
-
-    it('should return the y coordinate of the bottomLeft corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.bottomLeft().y, snake.y + snake.height);
-    });
-
-  });
-
-  describe('bottomRight()', function () {
-
-    it('should have a method called "bottomRight()"', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isFunction(snake.bottomRight);
-    });
-
-    it('should return an object', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isObject(snake.bottomRight());
-    });
-
-    it('should return an object with an "x" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.bottomRight().x);
-    });
-
-    it('should return an object with a "y" property that is a number', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.isNumber(snake.bottomRight().y);
-    });
-
-    it('should return the x coordinate of the bottomRight corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.bottomRight().x, snake.x + snake.width);
-    });
-
-    it('should return the y coordinate of the bottomRight corner of the snake', function () {
-      var snake = new Snake(20, 20, 20, 20);
-      assert.equal(snake.bottomRight().y, snake.y + snake.height);
-    });
-  });
 
   context('Collision Detection', function() {
-
-    it('should have a method called isEatingFood()', function() {
-      var snake = new Snake(20, 20, 400, 300);
-      assert.isFunction(snake.isEatingFood);
-    });
-
-    it('should return truthy if it is eating food', function() {
-      var snake = new Snake(100, 20, 20, 20);
-      var food = new Food(100, 50, 20, 20);
-      var eating = snake.isEatingFood(food);
-
-      assert.isTrue(eating);
-    });
-
-    it('should return false if it is not eating food', function() {
-      var snake = new Snake(20, 20, 20, 20);
-      var food = new Food(100, 50, 20, 20);
-      var eating = snake.isEatingFood(food);
-
-      assert.isFalse(eating);
-    });
-
-
-
-
 
   });
 
