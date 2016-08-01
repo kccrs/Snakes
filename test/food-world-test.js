@@ -39,4 +39,5 @@ describe('world in relation to food', function() {
     assert.isFunction(world.generateFood);
   });
 
+
 });

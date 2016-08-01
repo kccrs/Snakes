@@ -1,6 +1,7 @@
 const assert = require('chai').assert;
 const World = require('../lib/world');
-
+const Food = require('../lib/food');
+const Snake = require('../lib/snake');
 
 
 describe('World', function() {
@@ -19,5 +20,19 @@ describe('World', function() {
     var world = new World(400, 300);
     assert.isObject(world.snake);
   });
+
+  it('should not generate food in the same position as snake', function() {
+    var food = new Food(0, 0, 20, 20);
+    var head = new Snake(0, 0, 20, 20);
+    var snakeXValues = [0];
+    var snakeYValues = [0];
+
+    // Is the food X value in the snakeXValues array? If yes, dont make food.
+    
+
+    // assert.isTrue(food.x !== snake.x && food.y !==  snake.y);
+    // assert.isTrue(food.x === snake.x && food.y === snake.y);
+  });
+
 
 });
