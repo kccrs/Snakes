@@ -42,6 +42,7 @@ h3 {
   width: 60%;
   margin: auto;
 }
+
 #snake-game {
   background: url(images/airplane.png) no-repeat;
 }
@@ -79,4 +80,17 @@ button {
   color: white;
   font-family: 'Indie Flower', cursive;
   font-size: 20px;
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .container {
+    width: 100%;
+    border: 2px solid pink;
+  }
+  #snake-game {
+    width: 100%;
+  }
+
 }
