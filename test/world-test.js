@@ -12,12 +12,12 @@ describe('World', function() {
   });
 
   it('should have a default width and height', function() {
-    assert.equal(world.width, 400);
-    assert.equal(world.height, 300);
+    assert.equal(world.width, 600);
+    assert.equal(world.height, 400);
   });
 
   it('should have a "snake" property, which instantiates a new snake', function () {
-    var world = new World(400, 300);
+    var world = new World(600, 400);
     assert.isObject(world.snake);
   });
 

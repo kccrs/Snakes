@@ -2,10 +2,25 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Game Time</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <title>Snake</title>
 </head>
 <body>
-  <canvas id="snake-game" width="400" height="300" style="border: 2px solid black;"></canvas>
+  <h1>🐍 Snake on a Plane 🐍</h1>
+  <div class="score-board">
+    <h2>Score: </h2>
+    <h3 class="total-points">43</h3>
+  </div>
+  <div class="container">
+    <canvas id="snake-game" width="600" height="400" style="border: 2px solid black;"></canvas>
+  </div>
+  <div class="message">Here's your message!</div>
+  <section class="position-of-buttons">
+    <button type="button" class="start-button">START</button>
+    <button type="button" class="reset-button">RESET</button>
+  </section>
   <script src="main.bundle.js"></script>
 </body>
 </html>
