@@ -1,6 +1,8 @@
 const assert = require('chai').assert;
 const Snake = require('../lib/snake');
 const Food = require('../lib/food');
+// const World = require('../lib/world');
+
 
 describe('Snake', function() {
 
@@ -94,9 +96,26 @@ describe('Snake', function() {
       });
     });
 
+    // context('addSegment()', function() {
+    //
+    //   it('should return "food" when food is eaten heading right', function() {
+    //     var snake = new Snake(20, 20);
+    //     var food = new Food(40, 20);
+    //     world.rightArrow('food');
+    //     assert.equal("food", "food");
+    //   });
 
-  context('Collision Detection', function() {
+      // it('should add a snake segment to the segments array when food is eaten heading right', function() {
+      //   var snake = new Snake(20, 20);
+      //   snake.rightArrow('food');
+      //   assert.equal()
+      // });
 
-  });
+    // });
+
+
+  // context('Collision Detection', function() {
+  //
+  // });
 
 });

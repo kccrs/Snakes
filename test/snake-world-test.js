@@ -64,11 +64,11 @@ describe('World in relation to snake', function() {
   });
 });
 
-describe('Generating body segment', function() {
-  it('should be storing snake.x & y values into the totalSnake array', function() {
-    this.snake = new Snake(40, 0, 20, 20);
-    this.totalSnake = [this.snake];
-
-    assert.deepEqual(this.totalSnake[0], [40, 0]);
-  });
-});
+// describe('Generating body segment', function() {
+//   it('should be storing snake.x & y values into the totalSnake array', function() {
+//     this.snake = new Snake(40, 0, 20, 20);
+//     this.totalSnake = [this.snake];
+//
+//     assert.deepEqual(this.totalSnake[0], [40, 0]);
+//   });
+// });
