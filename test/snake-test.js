@@ -13,8 +13,8 @@ describe('Snake', function() {
     it('has all default values', function() {
       assert.equal(snake.x, 0);
       assert.equal(snake.y, 0);
-      assert.equal(snake.width, 20);
-      assert.equal(snake.height, 20);
+      assert.equal(snake.snakeBodyWidth, 20);
+      assert.equal(snake.snakeBodyHeight, 20);
     });
   });
 
@@ -27,8 +27,8 @@ describe('Snake', function() {
     it('should allow us to assign specific x and y values and otherwise use defaults', function(){
       // I should be able to create a Snake with x and y assigned
       // test that the x and y are not defaults
-      assert.equal(snake.height, 20);
-      assert.equal(snake.width, 20);
+      assert.equal(snake.snakeBodyHeight, 20);
+      assert.equal(snake.snakeBodyWidth, 20);
       assert.equal(snake.x, xValue);
       assert.equal(snake.y, yValue);
       // test that the height and width are defaults
@@ -44,7 +44,7 @@ describe('Snake', function() {
 
       it('moveRight() should stop snake when it hits the right border', function() {
         var snake = new Snake(20, 20, 385, 300);
-        assert.equal(snake.width, 385);
+        assert.equal(snake.snakeBodyWidth, 385);
       });
 
       it('"moveRight()" should increment the "x" property by 20', function () {
