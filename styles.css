@@ -1,9 +1,8 @@
 body {
-  background-size: cover;
   background: url(images/clouds2.jpg) no-repeat;
+  background-size: cover;
   flex-direction: column;
   font-family: 'Indie Flower', cursive;
-
 }
 
 body,
