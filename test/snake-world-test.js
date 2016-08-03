@@ -3,16 +3,6 @@ const Snake = require('../lib/snake');
 const Food = require('../lib/food');
 const World = require('../lib/world');
 
-
-describe('Snake in relation to the World', function() {
-
-  it('should know about the World if it is passed in', function() {
-    var world = new World (400, 300);
-    var snake = new Snake (0, 0, 20, 20, world);
-    assert.equal(snake.world, world);
-  });
-});
-
 describe('World in relation to snake', function() {
 
   it('should have a rightArrow() method', function() {

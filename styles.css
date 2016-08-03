@@ -1,70 +1,71 @@
 body {
-  display: flex;
+  background-size: cover;
+  background: url(images/clouds2.jpg) no-repeat;
   flex-direction: column;
   font-family: 'Indie Flower', cursive;
-  background: url(images/clouds2.jpg) no-repeat;
-  background-size: cover;
 
+}
+
+body,
+.container {
+  display: flex;
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
   border-bottom: 2px solid black;
-  width: 500px;
+  font-size: 40px;
   margin: 40px auto 0 auto;
-
+  width: 500px;
 }
 
-h3 {
-  font-size: 25px;
+h1,
+.message {
   font-weight: bold;
-  padding-top: 5px;
 }
 
 .container {
-  display: flex;
   justify-content: center;
-  width: 60%;
   margin: auto;
+  width: 60%;
 }
 
 #snake-game {
   background: url(images/airplane.png) no-repeat;
 }
 
-.message {
-  width: 20%;
-  margin: 30px auto;
-  height: 30px;
-  font-size: 25px;
+h1,
+.message,
+.position-of-buttons {
   text-align: center;
-  padding-top: 10px;
-  font-weight: bold;
+}
+
+.message {
   color: black;
+  font-size: 30px;
+  height: 30px;
+  margin: 30px auto;
+  padding-top: 10px;
+  width: 40%;
 }
 
 .position-of-buttons {
-  font-family: 'Indie Flower', cursive;
-  width: 20%;
-  height: 30px;
-  text-align: center;
-  margin: auto;
-  margin-top: 5px;
   display: inline-block;
+  height: 60px;
+  margin-top: 5px;
+  margin: auto;
+  width: 30%;
 }
 
 button {
-  width: 90px;
-  height: 40px;
-  margin: 30px 50px 0 20px;
+  background-color: #60646A;
   border-radius: 10px;
   border: 2px solid black;
-  background-color: #60646A;
   color: white;
   font-family: 'Indie Flower', cursive;
   font-size: 20px;
+  height: 40px;
+  margin: 10px 20px 0 20px;
+  width: 90px;
 }
 
 @media only screen
@@ -72,10 +73,8 @@ and (min-device-width : 375px)
 and (max-device-width : 667px) {
   .container {
     width: 100%;
-    border: 2px solid pink;
   }
   #snake-game {
     width: 100%;
   }
-
 }
