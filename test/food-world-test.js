@@ -33,4 +33,11 @@ describe('world in relation to food', function() {
     assert.isTrue(food.y > world.height - food.height);
   });
 
+  it('should not generate food in the same position as snake', function() {
+    var food = new Food(0, 0, 20, 20);
+    var snake = new Snake(0, 0, 20, 20);
+
+    assert.isFalse(food.x === snake.x && food.y === snake.y);
+  });
+
 });

@@ -94,3 +94,16 @@ describe('World in relation to snake', function() {
     });
   });
 });
+
+context('snake eats', function() {
+
+  it('should return "food"   when food is eaten by snake', function() {
+    var snake = new Snake(20, 20);
+    var food = new Food(40, 20);
+    var world = new World(600, 400);
+
+    world.rightArrow('food');
+    assert.equal('food', 'food');
+  });
+
+});

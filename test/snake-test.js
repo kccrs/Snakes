@@ -75,6 +75,7 @@ describe('Snake', function() {
       assert.isFunction(snake.moveDown);
     });
 
+
     it('"moveDown()" should increment the "y" property by 20', function () {
       var snake = new Snake(20, 20);
       snake.moveDown();
@@ -95,5 +96,6 @@ describe('Snake', function() {
       assert.equal(snake.y, 0);
     });
   });
+
 
 });
