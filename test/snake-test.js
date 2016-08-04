@@ -33,89 +33,67 @@ describe('Snake', function() {
       assert.equal(snake.y, yValue);
       // test that the height and width are defaults
     });
-   });
+  });
 
-    context('moveRight()', function () {
+  context('moveRight()', function () {
 
-      it('should have a method called "moveRight()', function () {
-        var snake = new Snake(20, 20);
-        assert.isFunction(snake.moveRight);
-      });
-
-      it('moveRight() should stop snake when it hits the right border', function() {
-        var snake = new Snake(20, 20, 385, 300);
-        assert.equal(snake.snakeBodyWidth, 385);
-      });
-
-      it('"moveRight()" should increment the "x" property by 20', function () {
-        var snake = new Snake(20, 20);
-        snake.moveRight();
-        assert.equal(snake.x, 40);
-      });
+    it('should have a method called "moveRight()', function () {
+      var snake = new Snake(20, 20);
+      assert.isFunction(snake.moveRight);
     });
 
-    context('moveLeft()', function () {
-
-      it('should have a method called "moveLeft()', function () {
-        var snake = new Snake(20, 20);
-        assert.isFunction(snake.moveLeft);
-      });
-
-      it('"moveLeft()" should decrement the "x" property by 20', function () {
-        var snake = new Snake(20, 20);
-        snake.moveLeft();
-        assert.equal(snake.x, 0);
-      });
+    it('moveRight() should stop snake when it hits the right border', function() {
+      var snake = new Snake(20, 20, 385, 300);
+      assert.equal(snake.snakeBodyWidth, 385);
     });
 
-    context('moveDown()', function () {
+    it('"moveRight()" should increment the "x" property by 20', function () {
+      var snake = new Snake(20, 20);
+      snake.moveRight();
+      assert.equal(snake.x, 40);
+    });
+  });
 
-      it('should have a method called "moveDown()', function () {
-        var snake = new Snake(20, 20);
-        assert.isFunction(snake.moveDown);
-      });
+  context('moveLeft()', function () {
 
-      it('"moveDown()" should increment the "y" property by 20', function () {
-        var snake = new Snake(20, 20);
-        snake.moveDown();
-        assert.equal(snake.y, 40);
-      });
+    it('should have a method called "moveLeft()', function () {
+      var snake = new Snake(20, 20);
+      assert.isFunction(snake.moveLeft);
     });
 
-    context('moveUp()', function () {
+    it('"moveLeft()" should decrement the "x" property by 20', function () {
+      var snake = new Snake(20, 20);
+      snake.moveLeft();
+      assert.equal(snake.x, 0);
+    });
+  });
 
-      it('should have a method called "moveUp()', function () {
-        var snake = new Snake(20, 20);
-        assert.isFunction(snake.moveUp);
-      });
+  context('moveDown()', function () {
 
-      it('"moveUp()" should decrement the "y" property by 20', function () {
-        var snake = new Snake(20, 20);
-        snake.moveUp();
-        assert.equal(snake.y, 0);
-      });
+    it('should have a method called "moveDown()', function () {
+      var snake = new Snake(20, 20);
+      assert.isFunction(snake.moveDown);
     });
 
-    // context('addSegment()', function() {
-    //
-    //   it('should return "food" when food is eaten heading right', function() {
-    //     var snake = new Snake(20, 20);
-    //     var food = new Food(40, 20);
-    //     world.rightArrow('food');
-    //     assert.equal("food", "food");
-    //   });
+    it('"moveDown()" should increment the "y" property by 20', function () {
+      var snake = new Snake(20, 20);
+      snake.moveDown();
+      assert.equal(snake.y, 40);
+    });
+  });
 
-      // it('should add a snake segment to the segments array when food is eaten heading right', function() {
-      //   var snake = new Snake(20, 20);
-      //   snake.rightArrow('food');
-      //   assert.equal()
-      // });
+  context('moveUp()', function () {
 
-    // });
+    it('should have a method called "moveUp()', function () {
+      var snake = new Snake(20, 20);
+      assert.isFunction(snake.moveUp);
+    });
 
-
-  // context('Collision Detection', function() {
-  //
-  // });
+    it('"moveUp()" should decrement the "y" property by 20', function () {
+      var snake = new Snake(20, 20);
+      snake.moveUp();
+      assert.equal(snake.y, 0);
+    });
+  });
 
 });
