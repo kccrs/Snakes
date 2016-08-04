@@ -96,14 +96,7 @@ describe('Snake', function() {
       });
     });
 
-    // context('addSegment()', function() {
-    //
-    //   it('should return "food" when food is eaten heading right', function() {
-    //     var snake = new Snake(20, 20);
-    //     var food = new Food(40, 20);
-    //     world.rightArrow('food');
-    //     assert.equal("food", "food");
-    //   });
+
 
       // it('should add a snake segment to the segments array when food is eaten heading right', function() {
       //   var snake = new Snake(20, 20);
@@ -111,11 +104,5 @@ describe('Snake', function() {
       //   assert.equal()
       // });
 
-    // });
-
-
-  // context('Collision Detection', function() {
-  //
-  // });
 
 });

@@ -21,18 +21,4 @@ describe('World', function() {
     assert.isObject(world.snake);
   });
 
-  // it('should not generate food in the same position as snake', function() {
-  //   var food = new Food(0, 0, 20, 20);
-  //   var snake = new Snake(0, 0, 20, 20);
-  //   var snakeXValues = [0];
-  //   var snakeYValues = [0];
-
-    // Is the food X value in the snakeXValues array? If yes, dont make food.
-
-
-    // assert.isTrue(food.x !== snake.x && food.y !==  snake.y);
-    // assert.isTrue(food.x === snake.x && food.y === snake.y);
-  // });
-
-
 });
