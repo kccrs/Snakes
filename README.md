@@ -47,7 +47,4 @@ npm test
 We decided to build a variation of the class snake game to stretch our Javascript and HTML5 Canvas abilities and better understand unit testing.
 
 ## License
-Our Surf's Up codebase is released under the [MIT License](http://www.opensource.org/licenses/MIT).
-
-
-
+Our codebase is released under the [MIT License](http://www.opensource.org/licenses/MIT).
